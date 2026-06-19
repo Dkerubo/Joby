@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joby — Remote Job Board | Powered by ZipRecruiter</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80'>💼</text></svg>">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon">💼</span>
+                    <h1>Joby</h1>
+                </div>
+                <p class="tagline">Find your next remote opportunity — powered by ZipRecruiter listings</p>
+            </div>
+        </div>
+    </header>
+    <section class="search-section">
+        <div class="container">
+            <div class="search-bar">
+                <div class="search-input-wrap">
+                    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                    <input type="text" id="searchInput" placeholder="Search by job title, company, or keyword...">
+                </div>
+            </div>
+            <div class="filters">
+                <div class="filter-group">
+                    <label>Category</label>
+                    <select id="categoryFilter">
+                        <option value="all">All Categories</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="Customer Service">Customer Service</option>
+                        <option value="Development">Development</option>
+                        <option value="Design">Design</option>
+                        <option value="Data & Analytics">Data & Analytics</option>
+                        <option value="Sales">Sales</option>
+                        <option value="Healthcare">Healthcare</option>
+                        <option value="Administrative">Administrative</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Location</label>
+                    <select id="locationFilter">
+                        <option value="all">All Locations</option>
+                        <option value="Remote (USA)">Remote (USA)</option>
+                        <option value="Remote (Worldwide)">Remote (Worldwide)</option>
+                        <option value="Hybrid">Hybrid</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Job Type</label>
+                    <select id="typeFilter">
+                        <option value="all">All Types</option>
+                        <option value="Full-Time">Full-Time</option>
+                        <option value="Part-Time">Part-Time</option>
+                        <option value="Contract">Contract</option>
+                    </select>
+                </div>
+                <button class="clear-btn" id="clearFilters">Clear All</button>
+            </div>
+            <div class="results-count">
+                <span id="jobCount">20</span> jobs found
+            </div>
+        </div>
+    </section>
+    <main class="jobs-section">
+        <div class="container">
+            <div id="jobGrid" class="job-grid"></div>
+            <div id="noResults" class="no-results" style="display:none">
+                <span class="no-results-icon">🔍</span>
+                <h3>No jobs match your search</h3>
+                <p>Try adjusting your filters or search terms</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>Built with ☀️ by <strong>Vero</strong> · Job data sourced from <a href="https://www.ziprecruiter.com" target="_blank" rel="noopener">ZipRecruiter</a> · Last updated June 19, 2026</p>
+            <p class="disclaimer">Joby aggregates publicly listed jobs. Click "Apply Now" to be taken directly to ZipRecruiter.</p>
+        </div>
+    </footer>
+    <script src="jobs.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
